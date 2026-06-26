@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import "Home/Home.css"
+
 
 function Home() {
   const [movieName,setMovieName]=useState("")
@@ -28,39 +30,35 @@ function Home() {
   
   
   return (
-    <div>
+    <div className='home'>
         <h1>Home page</h1>
+        <div className='navbar'>
         <Link to={"/"}>Home</Link>
         <Link to={'/favorites'}>Favourites</Link>
         <Link to={"/logout"}>Logout</Link>
         <Link to={"/login"}>Login_Signup</Link>
+        </div>
         <br />
         <br /><br />
-        <input type="text" placeholder='Movie Name' onChange={(e)=>setMovieName(e.target.value)} />       
-        <button onClick={searchBtn}>Search</button> 
+        <div className='search-section'>
+        <input className='search-input' type="text" placeholder='Movie Name' onChange={(e)=>setMovieName(e.target.value)} />       
+        <button className='search-btn' onClick={searchBtn}>Search</button> 
+       
         {loading && <h2>Loding..</h2>}
+         </div>
+         <div className='movies-info'>
         <h3>Found:{movies.length}  movies</h3>
         <h3>Favoutites Movies:{favorites.length}</h3>
+        </div>
         {favorites.map(movie=>movie.title+" , ")}
         
         <br /><br />
-        <div style={{display:"flex",
-              flexWrap:"wrap",
-              
-            }}>
+        <div className='movie-container'>
         {movies.map((movie,index)=>{
           return(
             
-          <div style={{width:250,
-            border:"1px solid black",
-            padding:"10px",
-            margin:"10px",
-            
-            
-          }} key={index}>
+          <div className='movie-card'  key={index}>
           <h1>{movie.title}</h1>
-          <p>{movie.release_date}</p>
-          <h4>Rating:{movie.vote_average}</h4>
           <h5>Overview:{movie.overview}</h5>
           <img style={{width:"100%",
             height:"300px",

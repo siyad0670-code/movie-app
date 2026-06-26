@@ -1,0 +1,138 @@
+.home {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #010613, #2d4d94, #000);
+  color: rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  gap: 50px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  justify-content: center;
+  
+}
+
+.navbar a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #6e5bd8;
+  transform: scale(1.5);
+}
+
+/* SEARCH */
+.search-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 12px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.search-btn:hover {
+  background: linear-gradient(180deg, #0ea5e9, #0284c7);
+  transform: scale(1.1);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* INFO */
+.movies-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* MOVIE GRID */
+.movie-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* MOVIE CARD */
+.movie-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 10px;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card h1 {
+  font-size: 18px;
+}
+
+.movie-card p {
+  color: #aaa;
+}
+
+.movie-card h5 {
+  color: #ffffff;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.movie-card button {
+  margin-top: 10px;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #ececec;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  color: #000;
+}
+
+.movie-card button:hover {
+  background: #010001;
+  color: #d44fd4;
+
+}
