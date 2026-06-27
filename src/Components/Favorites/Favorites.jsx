@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import "Favorites/Favorites.css"
+import "./Favorites.css"
 
 function Favorites() {
   const [favorites, setFavourites] = useState([]);
@@ -17,10 +17,12 @@ function Favorites() {
   };
 
   return (
-    <div>
-      <h1>Favorite Page</h1>
-      <Link to={"/"}>Home</Link>
-      <div className='movie-container'>
+     <div>
+      
+       <h1 className=''>Favorite Page</h1>
+       < Link className='home-link' to={"/"}>Home</Link>
+       <div className='movie-container'>
+
         {favorites.map((movie, index) => (
           <div className='movie-card' key={index}>
             <h1>{movie.title}</h1>
@@ -33,7 +35,9 @@ function Favorites() {
             <button onClick={() => RemoveHandle(index)}>Remove Favourite</button>
           </div>
         ))}
-      </div>
+        </div>
+      
+    
     </div>
   );
 }

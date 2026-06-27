@@ -4,3 +4,54 @@
   object-fit: cover;   /* crop instead of stretch */
   border-radius: 10px; /* optional: match card rounding */
 }
+.favorites-page {
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.favorites-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.favorites-header h1 {
+  color: #333;
+}
+
+.home-link {
+  text-decoration: none;
+  background: #0078d7;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.home-link:hover {
+  background: #005fa3;
+}
+
+
+.remove-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 8px 12px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.remove-btn:hover {
+  background: #cc0000;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+}

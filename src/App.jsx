@@ -3,7 +3,7 @@ import Login from "./Components/Login_Signup/Login"
 import Home from "./Components/Home/Home"
 import Favorites from "./Components/Favorites/Favorites"
 import MovieDetails from "./Components/MovieDetails"
-import Logout from "./Components/Logot"
+import Logout from "./Components/Logout/Logot"
 import {BrowserRouter,Route,Routes} from "react-router-dom"
 
 

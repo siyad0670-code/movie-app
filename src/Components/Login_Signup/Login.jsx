@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { auth } from '../../Firebase'
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword} from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+import "./Login.css"
 
 function Login() {
     const [email,setEmail]=useState("")
@@ -41,13 +42,14 @@ function Login() {
 
     
   return (
-    <div>
+    <div className='login-container'>
+      <div className='login-box'>
         <h1>login page</h1>
         <input onChange={(e)=>setEmail(e.target.value)} type="email" placeholder='email' />
         <input type="password" onChange={(e)=>setPassword(e.target.value)} placeholder='password' />
         <button onClick={sighnUphandle}>Signup</button>
         <button onClick={LoginHandle}>Login</button>
-        
+      </div>
       
     </div>
   )
